@@ -1,90 +1,87 @@
-// Override Bootstrap's Sass default variables
-//
-// Nearly all variables in Bootstrap are written with the `!default` flag.
-// This allows you to override the default values of those variables before
-// you import Bootstrap's source Sass files.
-//
-// Overriding the default variable values is the best way to customize your
-// CSS without writing _new_ styles. For example, change you can either change
-// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
-// `body { color: red; }`.
+@import "../node_modules/bootstrap/scss/bootstrap";
 
+$onyx: #2b2c30;
 
-//
-// Bring in Bootstrap
-//
+/* SCSS HEX */
+$charcoal: #264653ff;
+$persian-green:#2a9d8fff;
+$maize-crayola: #e9c46aff;
+$sandy-brown: #f4a261ff;
+$burnt-sienna: #e76f51ff;
 
-// Option 1
-//
-// Import all of Bootstrap's CSS
+/* SCSS HSL */
+$charcoal: hsla(197, 37%, 24%, 1);
+$persian-green: hsla(173, 58%, 39%, 1);
+$maize-crayola: hsla(43, 74%, 66%, 1);
+$sandy-brown: hsla(27, 87%, 67%, 1);
+$burnt-sienna: hsla(12, 76%, 61%, 1);
 
-// @import "bootstrap/scss/bootstrap";
+/* SCSS RGB */
+$charcoal: rgba(38, 70, 83, 1);
+$persian-green: rgb(51, 194, 177);
+$maize-crayola: rgba(233, 196, 106, 1);
+$sandy-brown: rgba(244, 162, 97, 1);
+$burnt-sienna: rgba(231, 111, 81, 1);
 
-// Option 2
-//
-// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
-
-// Toggle global options
-$enable-gradients: true;
-$enable-shadows: true;
-
-// Customize some defaults
-$body-color: #333;
-$body-bg: #fff;
-$border-radius: .4rem;
-$success: #7952b3;
-
-@import "bootstrap/scss/functions"; // Required
-@import "bootstrap/scss/variables"; // Required
-@import "bootstrap/scss/mixins"; // Required
-
-@import "bootstrap/scss/root"; // Required
-@import "bootstrap/scss/reboot"; // Required
-@import "bootstrap/scss/type";
-// @import "bootstrap/scss/images";
-// @import "bootstrap/scss/code";
-@import "bootstrap/scss/grid";
-// @import "bootstrap/scss/tables";
-// @import "bootstrap/scss/forms";
-@import "bootstrap/scss/buttons";
-@import "bootstrap/scss/transitions";
-// @import "bootstrap/scss/dropdown";
-// @import "bootstrap/scss/button-group";
-// @import "bootstrap/scss/input-group"; // Requires forms
-// @import "bootstrap/scss/custom-forms";
-// @import "bootstrap/scss/nav";
-// @import "bootstrap/scss/navbar"; // Requires nav
-// @import "bootstrap/scss/card";
-// @import "bootstrap/scss/breadcrumb";
-// @import "bootstrap/scss/pagination";
-// @import "bootstrap/scss/badge";
-// @import "bootstrap/scss/jumbotron";
-// @import "bootstrap/scss/alert";
-// @import "bootstrap/scss/progress";
-// @import "bootstrap/scss/media";
-// @import "bootstrap/scss/list-group";
-@import "bootstrap/scss/close";
-// @import "bootstrap/scss/toasts";
-@import "bootstrap/scss/modal"; // Requires transitions
-// @import "bootstrap/scss/tooltip";
-// @import "bootstrap/scss/popover";
-// @import "bootstrap/scss/carousel";
-// @import "bootstrap/scss/spinners";
-@import "bootstrap/scss/utilities";
-// @import "bootstrap/scss/print";
-
-
-//
-// Custom styles
-//
-
-@import "icon-list";
+$light-text-color:#F0F0F0;
 
 body {
-  padding: 3rem 1.5rem;
+  background-color: $onyx;
+  color: $light-text-color;
 }
 
-// Style Bootstrap icons
-.bi {
-  fill: currentColor;
+a {
+  // color: $persian-green;
+  color: sandybrown;
+  &:focus {
+    color: $sandy-brown;
+  } 
+
+  &:hover {
+    color: $sandy-brown;
+    filter:brightness(1.2);
+  }
+}
+
+.nav-item > a {
+  color: $persian-green;
+
+  &:hover {
+    color: $persian-green;
+    filter:brightness(1.2);
+  }
+}
+
+.card {
+  background-color: #6B6B6B;
+  color: $light-text-color;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#header:target {
+
+  h1 > a {
+    color: black;
+    background-color:$sandy-brown;
+  }
+}
+
+#contact:target {
+  color: black;
+  background-color:$sandy-brown;
+}
+
+#projects:target {
+  color: black;
+  background-color:$sandy-brown;
+}
+
+#profile:target {
+  color: black;
+  background-color:$sandy-brown;
+}
+
+#background:target {
+  color: black;
+  background-color:$sandy-brown;
 }
