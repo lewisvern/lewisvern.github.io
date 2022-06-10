@@ -1,3 +1,4 @@
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 $onyx: #2b2c30;
@@ -84,4 +85,8 @@ a {
 #background:target {
   color: black;
   background-color:$sandy-brown;
+}
+
+.accordion-body {
+  color: black;
 }
